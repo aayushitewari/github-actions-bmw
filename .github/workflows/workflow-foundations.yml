@@ -1,0 +1,31 @@
+name: Workflow Fundamentals
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+  
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+      
+    - name: Print YAML Explanation
+      run: echo "YAML Ain't Markup Language (YAML)"
+      
+    - name: Trigger Workflow on Events
+      run: echo "Events trigger workflows (on:)"
+      
+    - name: Define Job
+      run: echo "One or multiple jobs"
+      
+    - name: Execute on Runner
+      run: echo "Executed on a runner"
+      
+    - name: Contain Steps
+      run: echo "Contains steps"
+      
+    - name: Reusable Step is Action
+      run: echo "A reusable step is an action"
